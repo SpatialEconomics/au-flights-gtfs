@@ -26,7 +26,7 @@ dev = ["pytest>=7"]
 au-flights-gtfs = "au_flights_gtfs.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/saeid-adli/au-flights-gtfs"
+Homepage = "https://github.com/SpatialEconomics/au-flights-gtfs"
 
 [tool.setuptools.packages.find]
 where = ["src"]
