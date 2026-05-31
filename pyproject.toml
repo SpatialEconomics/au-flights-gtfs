@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "au-flights-gtfs"
+version = "0.1.0"
+description = "Build a GTFS feed of scheduled flights between Victorian, NSW and ACT airports from AviationStack schedule data."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Saeid Adli", email = "saeid.adli@gmail.com" }]
+keywords = ["gtfs", "flights", "aviation", "australia", "transit", "aviationstack"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["requests>=2.31"]
+
+[project.optional-dependencies]
+notebook = ["jupyter", "pandas", "matplotlib"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+au-flights-gtfs = "au_flights_gtfs.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/saeid-adli/au-flights-gtfs"
+
+[tool.setuptools.packages.find]
+where = ["src"]
